@@ -1,0 +1,20 @@
+{
+    "name": "evaldukas/cli-order",
+    "authors": [
+        {
+            "name": "Evaldas Butkus",
+            "email": "eval.butkus@gmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/database": "^5.7",
+        "vlucas/phpdotenv": "^3.3",
+        "symfony/console": "^4.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bootstrap\\": "bootstrap/",
+            "App\\": "src/"
+        }
+    }
+}
