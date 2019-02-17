@@ -8,7 +8,6 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
-use App\Models\OrderModel;
 use App\Repositories\OrderRepository;
 
 class ListOrderCommand extends Command
@@ -29,6 +28,10 @@ class ListOrderCommand extends Command
             ->setDescription('List of orders');
     }
 
+    /**
+     * @param InputInterface $input 
+     * @param OutputInterface $output 
+     */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $this->orderRepository->list(new SymfonyStyle($input, $output));

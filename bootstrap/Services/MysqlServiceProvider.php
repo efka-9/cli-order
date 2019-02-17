@@ -21,7 +21,7 @@ class MysqlServiceProvider implements Service
 		]);
 	}
 
-	public function boot()
+	public function boot() : void
 	{
 		$this->capsule->setAsGlobal();
 		$this->capsule->bootEloquent();

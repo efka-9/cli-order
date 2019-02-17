@@ -27,9 +27,13 @@ class DeleteOrderCommand extends Command
     {
         $this
             ->setName('order:delete')
-            ->setDescription('List of orders');
+            ->setDescription('Delete the order');
     }
 
+    /**
+     * @param InputInterface $input 
+     * @param OutputInterface $output 
+     */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $helper = $this->getHelper('question');

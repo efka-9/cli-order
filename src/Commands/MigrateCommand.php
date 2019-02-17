@@ -10,8 +10,17 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class MigrateCommand extends Command
 {
-    protected static $defaultName = 'migrate';
+    protected function configure()
+    {
+        $this
+            ->setName('migrate')
+            ->setDescription('Table migration');
+    }
 
+    /**
+     * @param InputInterface $input 
+     * @param OutputInterface $output 
+     */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         try {

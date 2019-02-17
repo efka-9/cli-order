@@ -3,7 +3,6 @@
 // src/Command/CreateUserCommand.php
 namespace App\Commands;
 
-use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -17,9 +16,13 @@ class CreateOrderCommand extends Command
     {
         $this
             ->setName('order:create')
-            ->setDescription('Creates a new order.');
+            ->setDescription('Create the new order.');
     }
 
+    /**
+     * @param InputInterface $input 
+     * @param OutputInterface $output 
+     */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         while (true) {

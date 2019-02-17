@@ -8,7 +8,10 @@ use App\Models\OrderModel;
 
 class OrderRepository
 {
-    public function list(SymfonyStyle $symfonyStyle)
+    /**
+     * @param SymfonyStyle $symfonyStyle 
+     */
+    public function list(SymfonyStyle $symfonyStyle) : void
     {
         $tableContent = [];
 

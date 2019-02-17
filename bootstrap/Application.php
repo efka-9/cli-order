@@ -8,7 +8,10 @@ use Bootstrap\Services\MysqlServiceProvider;
 
 class Application
 {
-	public function register(Service $service)
+	/**
+	 * @param Service $service 
+	 */
+	public function register(Service $service) : void
 	{
 		$service->boot();
 	}
