@@ -42,9 +42,16 @@ class DeleteOrderCommand extends Command
             $this->orderRepository->list(new SymfonyStyle($input, $output));
 
             $question = new Question('Please enter the id of order to delete: ');
-            $idToDelete = $helper->ask($input, $output, $question);
+            $orderId = $helper->ask($input, $output, $question);
 
-            OrderModel::destroy($idToDelete);
+            $orderToDelete = OrderModel::find($orderId);
+
+            if (! $orderToDelete) {
+                $output->write("Order with id {$orderId} could not by find.");
+                continue;
+            }
+
+            $orderToDelete->delete();
 
             $output->writeln([
                 '============',
