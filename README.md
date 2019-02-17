@@ -1,11 +1,13 @@
 ## Task description
 Create a command line (PHP CLI) app for ordering a meal. The order management should be
 done via terminal. All the data needs to be persisted to an SQL database or a file.
-Order format: email, meal, comment, date
+
+Order format: <bold>email, meal, comment, date</bold>
+
 Required features:
-● Place an order
-● Update an order
-● Delete an order
+* Place an order
+* Update an order
+* Delete an order
 
 #### Installation guide
 1. cp .env.example .env
